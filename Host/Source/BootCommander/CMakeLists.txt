@@ -35,7 +35,7 @@ cmake_minimum_required(VERSION 3.15)
 project(BootCommander)
 
 # Build debug version by default
-set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_BUILD_TYPE "Release")
 
 
 #****************************************************************************************
@@ -160,6 +160,7 @@ add_executable(
 
 # Add libraries.
 target_link_libraries(BootCommander ${LIBOPENBLT_LIBNAME})
+target_link_libraries(BootCommander -Wl,-Bstatic usb-1.0 -Wl,-Bdynamic udev dl)
 
 # Only generate the PC-lint taget if the option is enabled. Use "make BootCommander_LINT"
 # to lint the project sources

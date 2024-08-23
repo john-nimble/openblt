@@ -35,7 +35,7 @@ cmake_minimum_required(VERSION 3.15)
 project(LibOpenBLT)
 
 # Build debug version by default
-set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_BUILD_TYPE "Release")
 
 
 #****************************************************************************************
@@ -44,12 +44,12 @@ set(CMAKE_BUILD_TYPE "Debug")
 # Add option with default value to enable the generation and building of the shared
 # library. By default it is turned on. It can be overridden on the command line when 
 # CMake is called using the following parameter: -DBUILD_SHARED=OFF
-option(BUILD_SHARED "Configurable to enable/disable building of the shared library" ON)
+option(BUILD_SHARED "Configurable to enable/disable building of the shared library" OFF)
 
 # Add option with default value to enable the generation and building of the static
 # library. By default it is turned off. It can be overridden on the command line when 
 # CMake is called using the following parameter: -DBUILD_STATIC=ON
-option(BUILD_STATIC "Configurable to enable/disable building of the static library" OFF)
+option(BUILD_STATIC "Configurable to enable/disable building of the static library" ON)
 
 # Add option with default value to disable the generation of the PC-lint target. It can 
 # be overridden on the command line when CMake is called using the following parameter:
